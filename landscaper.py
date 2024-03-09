@@ -2,6 +2,10 @@
 
 tools = [
     {"name": "your teeth", "revenue": 1, "cost": 0}
+    {"name": "rusty scissors", "revenue": 5, "cost": 5}
+    {"name": "old-timey push mower", "revenue": 50, "cost": 25}
+    {"name": "battery-powered lawn mower", "revenue": 100, "cost": 250}
+    {"name": "team of starving students", "revenue": 250, "cost": 500}
 ]
 
 ## What do the player(s) need to win?
@@ -12,8 +16,8 @@ player = {
 }
 
 ## What happens when I mow a lawn? need a "function to mow lawn"
-# def mow_lawn():
-
+def mow_lawn():
+    pass
 
 ## What happens when I upgrade my tools?
 ## What happens when I  run out of tools? (if statement)
