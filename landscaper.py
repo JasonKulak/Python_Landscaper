@@ -48,8 +48,28 @@ def win_check():
         return True
     return False
 
-while
+## Make Player functionality/The game playable...create While Loop
+while (True):
 
+    i = input("[1] Mow Lawn [2] Check Stats [3] Upgrade [4] Quit")
+
+    i = int(i)
+
+    if (i = 1):
+        mow_lawn()
+    
+    if (i = 2):
+        check_stats()
+
+    if (i = 3):
+        upgrade()
+
+    if (i = 4):
+        print("You quit the game")
+        break
+
+    if (win_check()):
+        break
 
 
 ## What happens when I  run out of tools? (if statement)
@@ -61,4 +81,4 @@ while
 # Welcome message
 print("Welcome to Landscaper!!!")
 
-## Make Player functionality/The game playable...create While Loop
+
