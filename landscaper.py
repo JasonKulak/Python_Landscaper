@@ -17,13 +17,6 @@ tools = [
     {"name": "team of starving students", "revenue": 250, "cost": 500}
 ]
 
-## What do the player(s) need to win?
-# player = {
-#     "money": 0,
-#     "tool": 0,
-#     "won_game": False
-# }
-
 ## What happens when I mow a lawn? need a "function to mow lawn"
 def mow_lawn():
     tool = tools[game["tool"]]
@@ -36,6 +29,8 @@ def check_stats():
     print(f"You currently have {game["money"]} and are using a {tool["name"]}")
 
 ## What happens when I upgrade my tools?
+## What happens when I  run out of tools? (if statement)
+## Do I have enough money?
 def upgrade():
     if (game["tool"] >= len(tools) - 1):
         print("no more upgrades")
@@ -51,6 +46,7 @@ def upgrade():
     game["money"] -= next_tool["cost"]
     game["tool"] += 1
 
+## Win condition
 def win_check():
     if(game["tool"] == 4 and game["money"] >= 1000):
         print("You Win!!!")
@@ -79,7 +75,3 @@ while (True):
 
     if (win_check()):
         break
-
-
-## What happens when I  run out of tools? (if statement)
-## Do I have enough money?
