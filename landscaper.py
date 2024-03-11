@@ -42,6 +42,15 @@ def upgrade():
     game["money"] -= next_tool["cost"]
     game["tool"] += 1
 
+def win_check():
+    if(game["tool"] == 1 and game["money"] == 1000):
+        print("You Win!!!")
+        return True
+    return False
+
+while
+
+
 
 ## What happens when I  run out of tools? (if statement)
 ## Do I have enough money?
