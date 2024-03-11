@@ -1,14 +1,19 @@
 ## Reference your JS Landscaper HW from Unit 1
 
+## Make an "alert" introducing the game
+    
+# Welcome message
+print("Welcome to Landscaper!!!")
+
 ## Game State
 
 game = {"tool": 0, "money": 0}
 
 tools = [
-    {"name": "your teeth", "revenue": 1, "cost": 0}
-    {"name": "rusty scissors", "revenue": 5, "cost": 5}
-    {"name": "old-timey push mower", "revenue": 50, "cost": 25}
-    {"name": "battery-powered lawn mower", "revenue": 100, "cost": 250}
+    {"name": "your teeth", "revenue": 1, "cost": 0},
+    {"name": "rusty scissors", "revenue": 5, "cost": 5},
+    {"name": "old-timey push mower", "revenue": 50, "cost": 25},
+    {"name": "battery-powered lawn mower", "revenue": 100, "cost": 250},
     {"name": "team of starving students", "revenue": 250, "cost": 500}
 ]
 
@@ -32,6 +37,9 @@ def check_stats():
 
 ## What happens when I upgrade my tools?
 def upgrade():
+    if (game["tool"] >= len(tools) - 1):
+        print("no more upgrades")
+        return 0
     next_tool = tools[game["tool"]+1]
     if (next_tool == None):
         print("There are no more tools")
@@ -39,11 +47,12 @@ def upgrade():
     if (game["money"] < next_tool["cost"]):
         print("not enough to buy tool")
         return 0
+    print("You are upgrading your tool")
     game["money"] -= next_tool["cost"]
     game["tool"] += 1
 
 def win_check():
-    if(game["tool"] == 1 and game["money"] == 1000):
+    if(game["tool"] == 4 and game["money"] >= 1000):
         print("You Win!!!")
         return True
     return False
@@ -55,16 +64,16 @@ while (True):
 
     i = int(i)
 
-    if (i = 1):
+    if (i == 1):
         mow_lawn()
     
-    if (i = 2):
+    if (i == 2):
         check_stats()
 
-    if (i = 3):
+    if (i == 3):
         upgrade()
 
-    if (i = 4):
+    if (i == 4):
         print("You quit the game")
         break
 
@@ -74,11 +83,3 @@ while (True):
 
 ## What happens when I  run out of tools? (if statement)
 ## Do I have enough money?
-
-
-## Make an "alert" introducing the game
-    
-# Welcome message
-print("Welcome to Landscaper!!!")
-
-
