@@ -1,5 +1,9 @@
 ## Reference your JS Landscaper HW from Unit 1
 
+## Game State
+
+game = {"tool": 0, "money": 0}
+
 tools = [
     {"name": "your teeth", "revenue": 1, "cost": 0}
     {"name": "rusty scissors", "revenue": 5, "cost": 5}
@@ -9,15 +13,24 @@ tools = [
 ]
 
 ## What do the player(s) need to win?
-player = {
-    "money": 0,
-    "tool": 0,
-    "won_game": False
-}
+# player = {
+#     "money": 0,
+#     "tool": 0,
+#     "won_game": False
+# }
 
 ## What happens when I mow a lawn? need a "function to mow lawn"
 def mow_lawn():
-    pass
+    tool = tools[game["tool"]]
+    print(f"You mow a lawn with you {tool["name"]} and make {tool["revenue"]}")
+    game["money"] += tool["revenue"]
+
+## Check your progress
+def check_stats():
+    tool = tools[game["tool"]]
+    print(f"You currently have {game["money"]} and are using a {tool["name"]}")
+
+def upgrade():
 
 ## What happens when I upgrade my tools?
 ## What happens when I  run out of tools? (if statement)
@@ -28,3 +41,5 @@ def mow_lawn():
     
 # Welcome message
 print("Welcome to Landscaper!!!")
+
+## Make Player functionality/The game playable...create While Loop
